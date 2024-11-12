@@ -6,7 +6,7 @@
     right: 0;
 }
 .navBar{
-    height: 50px;
+    height: 60px;
 }
 .title{
     font-size: 30px;
@@ -16,4 +16,16 @@
     position: fixed;
     top: 0;
     right: 0;
+}
+.searchInputFields{
+    background-color: darkgreen;
+    height: 60px;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 60px;
+    z-index: 1000;
+}
+.countrySelector{
+
 }

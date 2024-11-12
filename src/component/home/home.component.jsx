@@ -1,8 +1,7 @@
 import "./home.css";
 import NavBar from "../navbar/navbar.component"
 import { useNavigate } from 'react-router-dom';
-
-
+import AllNews from "../allNewsView/allNewsView.component";
 const Home = () => {
   const navigate = useNavigate()
 
@@ -11,9 +10,9 @@ const Home = () => {
 
 
   return (
-    <div className="nav-wrapper">
+    <div className="mainWrapper">
       <NavBar/>
-
+      <AllNews/>
     </div>
 
   );
