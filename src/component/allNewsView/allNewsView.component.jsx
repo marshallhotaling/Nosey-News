@@ -13,15 +13,13 @@ const AllNews = () => {
   return (
     <div className="allNewsWapper">
       <div className="scroolView">
+      {topHeadlineData.map(({title, publishedAt, urlToImage, url, description  }) => (
+        <div className="singleNewsCard" onClick={()=> window.location.href = url}>
 
-      {topHeadlineData.map(({title, publishedAt, urlToImage, url, description  },idx) => (
-        <div className="singleNewsCard" onClick={()=> window.location.href = url
-        }>
-          <img classsName="" src={urlToImage}/>
-
-
-
-
+          <img className="singleNewsImg" src={urlToImage}/>
+          <label className="singleNewsTitle">{title}</label>
+          <p className="singleNewsDiscription">{description}</p>
+          <label className="singleNewsDate">Published:{publishedAt}</label>
         </div>
 
       ))}
