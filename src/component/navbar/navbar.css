@@ -1,8 +1,19 @@
 .nav-Wrapper{
-    background-color: black;
+    background-color: darkolivegreen;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
 }
-
+.navBar{
+    height: 50px;
+}
+.title{
+    font-size: 30px;
+}
+.searchOption{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
