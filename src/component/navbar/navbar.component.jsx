@@ -15,6 +15,9 @@ const NavBar = ({ search, isHome,}) => {
       <nav className="navBar">
         <label onClick={handleHomeLoad} className="title">Nosey News</label>
         <img className="searchOption" src={searchIcon} alt={"search"} />
+        <div className="searchInputFields">
+          
+        </div>
       </nav>
     </div>
 
