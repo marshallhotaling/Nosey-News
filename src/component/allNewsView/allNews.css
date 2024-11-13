@@ -3,8 +3,8 @@
     height: 100%;
     z-index: 10;
 }
-.scroolView{
 
+.scroolView{
     background-color: darkslategrey;
     width: 100%;
     height: 100%;
@@ -21,8 +21,8 @@
     text-align: left;
     border: 4px solid goldenrod;
     padding: 25px;
-
 }
+
 .singleNewsImg{
     width: 250px;
     min-height: 150px;
@@ -30,12 +30,14 @@
     margin-bottom: 30px;
     display: block;
 }
+
 .singleNewsTitle{
     font-weight: bold;
     font-size: 22px;
     color: black;
     display: block;
 }
+
 .singleNewsDiscription{
     color: dimgray;
     display: block;
@@ -45,6 +47,7 @@
     font-size: 13px;
     display: block;
 }
+
 .nav-Wrapper-Closed{
     border: 4px solid goldenrod;
     background-color: white;
@@ -52,6 +55,7 @@
     width: 100%;
     height: 60px;
 }
+
 .nav-Wrapper-Open{
     border: 4px solid goldenrod;
     background-color: white;
@@ -59,6 +63,7 @@
     width: 100%;
     height: 120px;
 }
+
 .searchInputFields{
     background-color: white;
     /*background-color: darkolivegreen;*/
@@ -66,13 +71,16 @@
     width: 100%;
     z-index: 1000;
 }
+
 .showSearchInputFields{
     width: 100%;
     height: 160px;
 }
+
 .navBar{
     height: 60px;
 }
+
 .title{
     font-weight: bold;
     font-size: 35px;
@@ -81,6 +89,7 @@
     margin-top: 5px;
     margin-left: 5px;
 }
+
 .searchOption{
     background-color: black;
     height: 50px;
@@ -97,9 +106,11 @@
     height: 30px;
 
 }
+
 .selectCenter {
     text-align: center;
 }
+
 .spacer {
     display: block;
     height: 200px;
