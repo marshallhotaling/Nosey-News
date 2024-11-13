@@ -1,31 +1,32 @@
 import "./allNews.css"
-import {
-  apiKey,
-} from "../../shared/shared";
+import {apiKey,} from "../../shared/shared";
 import searchIcon from "../../icons/search.png";
 import {useState, useEffect} from "react";
 import axios from "axios";
+import {useNavigate} from 'react-router-dom';
 import {topHeadlineData} from "../../Data/top-headlines-mock-data";
 
 const AllNews = () => {
   const [showSearch,setShowSearch]= useState(true)
-  const [mainData, setMainData] = useState([])
-  const [viewData, setViewData] = useState([])
+  const [originalData, setOriginalData] = useState([])
+  const [filteredData, setFilteredData] = useState([])
   let [allNewsSourcesNames, setAllNewsSourcesNames] = useState([])
+  const navigate = useNavigate();
+
   let useMockData = true
 
   useEffect(() => {
     if (useMockData) {
-      setViewData(topHeadlineData.articles)
-      setMainData(topHeadlineData.articles)
+      setOriginalData(topHeadlineData.articles)
+      setFilteredData(topHeadlineData.articles)
       if (allNewsSourcesNames.length === 0) {
         getAllNewsSourceNames(topHeadlineData.articles)
       }
     } else {
       const data = axios.get(`https://newsapi.org/v2/top-headlines?country=us&apiKey=${apiKey}`, {});
       data.then((value) => {
-        setViewData(value.data.articles)
-        setMainData(value.data.articles)
+        setOriginalData(value.data.articles)
+        setFilteredData(value.data.articles)
         if (allNewsSourcesNames.length === 0) {
           getAllNewsSourceNames(value.data.articles)
         }
@@ -33,17 +34,16 @@ const AllNews = () => {
     }
   }, []);
 
-
   useEffect(() => {
     // console.log('here')
 
-  }, [viewData]);
+  }, [filteredData]);
 
   if(showSearch === false){
     return (
       <div className="mainWrapper">
         <nav className="nav-Wrapper-Closed">
-          <label className="title">Nosey News closed</label>
+          <label className="title">Nosey News</label>
           <img className="searchOption" src={searchIcon} onClick={() => {
             setShowSearch(true)
           }} alt={"search"} />
@@ -57,11 +57,11 @@ const AllNews = () => {
     return (
       <div className="mainWrapper">
         <nav className="nav-Wrapper-Open">
-          <label className="title">Nosey News open</label>
+          <label className="title">Nosey News</label>
           <img className="searchOption" src={searchIcon} onClick={() => {
             setShowSearch(false)
           }} alt={"search"}/>
-          <div>
+          <div className="selectCenter">
             <select className="newsSourceNamesDropDown" onChange={(value) => searchFor(value.target.value)}>
               <option value={"all"}>Show All</option>
               {allNewsSourcesNames.map(({name}, index) => (
@@ -77,16 +77,17 @@ const AllNews = () => {
 
   function searchFor(value) {
     if (value === "all") {
-      setViewData(mainData)
+      setFilteredData(originalData)
       return
     }
     let searchMainData = []
-    for (let i = 0 ; mainData.length > i; ++i){
-      if(value === mainData[i].source.name){
-        searchMainData.push(mainData[i])
+    for (let i = 0 ; originalData.length > i; ++i){
+      if(value === originalData[i].source.name){
+        searchMainData.push(originalData[i])
       }
     }
-    setViewData(searchMainData)
+    console.log(searchMainData)
+    setFilteredData(searchMainData)
   }
 
   function getAllNewsSourceNames(data) {
@@ -111,8 +112,10 @@ const AllNews = () => {
   function mainView() {
     return (
       <div className="scroolView">
-        {viewData.map(({title, publishedAt, urlToImage, url, description  }, index) => (
-          <div className="singleNewsCard" onClick={()=> window.location.href = url} key={index}>
+        {filteredData.map(({title, publishedAt, urlToImage, url, description  }, index) => (
+          <div className="singleNewsCard" onClick={()=> {
+            navigate(`/story/`, {state: filteredData[index]})
+          }} key={index}>
             <img className="singleNewsImg" src={urlToImage} alt={""}/>
             <label className="singleNewsTitle">{title}</label>
             <p className="singleNewsDiscription">{description}</p>
@@ -123,5 +126,7 @@ const AllNews = () => {
     );
   }
 };
+
+
 
 export default AllNews;
