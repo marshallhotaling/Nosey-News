@@ -1,10 +1,7 @@
 .allNewsWapper{
     background-color: white;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    top:160px;
+    width: 100%;
+    height: 100%;
     z-index: 10;
 }
 .scroolView{
@@ -44,4 +41,45 @@
 .singleNewsDate{
     font-size: 13px;
     display: block;
+}
+.nav-Wrapper-Closed{
+    background-color: darkolivegreen;
+    width: 100%;
+    height: 60px;
+}
+.nav-Wrapper-Open{
+    background-color: green;
+    width: 100%;
+    height: 120px;
+}
+.searchInputFields{
+    background-color: darkgreen;
+    height: 120px;
+    width: 100%;
+    z-index: 1000;
+}
+.showSearchInputFields{
+    width: 100%;
+    height: 160px;
+}
+.navBar{
+    height: 60px;
+}
+.title{
+    font-size: 30px;
+}
+.searchOption{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.countrySelector{
+
+}
+.newsSourceNamesDropDown {
+    margin-top: 16px;
+    width: 200px;
+    height: 30px;
 }
