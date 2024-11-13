@@ -24,7 +24,10 @@ Tower,
 # Preview of App:
 <picture><img src="/src/assets/chrome-capture-2024-11-13.gif" alt="app navigation preview " width="250px"/></picture>
 
+<picture><img src="/src/assets/search-capture-2024-11-13.gif" alt="app search preview " width="250px"/></picture>
 # Mobile:
+
+<picture><img src="/src/assets/moble-capture-2024-11-13.gif" alt="app moble preview " width="250px"/></picture>
 
 
 # Wins + Challenges:
