@@ -1,16 +1,11 @@
 import "./articleView.css"
-import {useEffect} from "react";
 import {useLocation, useNavigate} from "react-router-dom";
-
 
 const ArticleView = () => {
   const {state} = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    console.log('state', state)
-  }, []);
-
+  //check to make sure there is a state data if not return error view and link to return
   if (state) {
     return (
       <div className="mainWrapper">
@@ -19,24 +14,27 @@ const ArticleView = () => {
         </nav>
         <div className="singleScroolView">
           <img className="articleImage" src={state.urlToImage} alt={""}/>
-          <label className="articleSource">Source : {state.source.name}</label>
-          <label className="articleAuthor">Author : {state.author}</label>
-          <label className="articleDate">Date : {state.publishedAt}</label>
+          <label className="articleSource"><b>Source : </b>{state.source.name}</label>
+          <label className="articleAuthor"><b>Author : </b>{state.author}</label>
+          <label className="articleDate"><b>Date : </b>{state.publishedAt}</label>
           <label className="articleTitle">{state.title}</label>
           <label className="articleDescription">{state.description}</label>
-          <label className="articleContent">{state.content}</label>
-          <label className="articleLabel7">For More Read Original Article at : <a
+          <label className="articleContent">{state.content} <br/><br/> <b>For More Read Original Article at : </b><a
             href={state.url}>{state.url}</a></label>
+          <div className="spacer"/>
         </div>
       </div>
-
     )
+
   } else {
+
     return (
+
       <div>
-        <label>Sorry No data</label>
+        <label>Error : Sorry No data</label>
         <label onClick={() => navigate("/")}>Return To Main View</label>
       </div>
+
     )
   }
 }
