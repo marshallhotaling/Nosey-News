@@ -9,10 +9,10 @@
 
 ## Tech
 FE - 
-Built with React 
-Axios 
-GitHub Project board
-Draw.io
+Built with React, 
+Axios,
+GitHub Project board,
+Draw.io,
 
 ## Installation 
 
