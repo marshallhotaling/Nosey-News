@@ -1,4 +1,4 @@
-# Nosey-News
+# 🐽 Nosey-News 🗞️
 
 ## Context 
 This app is meant for a user to see the latest story's from multiple news outlet's using a [Worldwide news API](https://newsapi.org/)
@@ -30,16 +30,15 @@ Tower,
 <picture><img src="/src/assets/moble-capture-2024-11-13.gif" alt="app moble preview " width="250px"/></picture>
 
 
-# Wins + Challenges:
-
-
+# Challenges:
+1. Working with a large API for the first time 
+2. Architecture 
+3. Over engineering 
+ 
 # Learning goals 
-1. Organisation/Planing 
-2. 
-
-
-
-
+1. Better Organisation/Planing 
+2. Better react skills 
+3. Make fetch calls more efficient 
 
 ## coded by 
 
