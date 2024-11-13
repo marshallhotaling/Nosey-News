@@ -1,18 +1,16 @@
 # Nosey-News
 
+## Context 
+This app is meant for a user to see the latest story's from multiple news outlet's using a [Worldwide news API](https://newsapi.org/)
 
-
-[GitHub Project Board](https://github.com/users/marshallhotaling/projects/2/views/8)
-
-[Planning Project Board](https://drive.google.com/file/d/1_5cqEyWsd2zrFc4GUXpFVV2DSzSwwCGY/view?usp=sharing)
-
-
-## Tech
-FE - 
-Built with React, 
-Axios,
+## Tech used for this project 
+Built with React,
 GitHub Project board,
+[GitHub Project Board](https://github.com/users/marshallhotaling/projects/2/views/8)
 Draw.io,
+[Planning Project Board](https://drive.google.com/file/d/1_5cqEyWsd2zrFc4GUXpFVV2DSzSwwCGY/view?usp=sharing)
+Axios,
+Tower,
 
 ## Installation 
 
@@ -21,11 +19,23 @@ Draw.io,
 2. `cd` into cloned repo 
 3. Run `npm install`
 4. Run `npm start`
-5. Enter `control + c` in your terminal to stop running the React app at any time 
-6. To run Cypress tests, use `npx cypress open`
+5. Enter `control + c` in your terminal to stop running the React app at any time
 
-## Usage 
-This app is meant for a user to see every perspective on the latest story's worldwide 
+# Preview of App:
+
+
+# Mobile:
+
+
+# Wins + Challenges:
+
+
+# Learning goals 
+1. Organisation/Planing 
+2. 
+
+
+
 
 
 ## coded by 
