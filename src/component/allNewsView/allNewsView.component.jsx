@@ -112,8 +112,8 @@ const AllNews = () => {
   function mainView() {
     return (
       <div className="scroolView">
-        {filteredData.map(({title, publishedAt, urlToImage, url, description  }, index) => (
-          <div className="singleNewsCard" onClick={()=> {
+        {filteredData.map(({title, publishedAt, urlToImage, url, description}, index) => (
+          <div className="singleNewsCard" onClick={() => {
             navigate(`/story/`, {state: filteredData[index]})
           }} key={index}>
             <img className="singleNewsImg" src={urlToImage} alt={""}/>
@@ -122,11 +122,11 @@ const AllNews = () => {
             <label className="singleNewsDate">Published:{publishedAt}</label>
           </div>
         ))}
+        <div className="spacer"/>
       </div>
     );
   }
 };
-
 
 
 export default AllNews;

@@ -11,7 +11,7 @@
     text-align: center;
 }
 .singleNewsCard{
-    width: 600px;
+    width: 250px;
     /*height: 600px;*/
     margin: 25px;
     display: inline-block;
@@ -21,9 +21,9 @@
 
 }
 .singleNewsImg{
-    width: 550px;
-    min-height: 400px;
-    min-width: 550px;
+    width: 250px;
+    min-height: 150px;
+    min-width: 250px;
     margin-bottom: 30px;
     display: block;
 }
@@ -86,4 +86,8 @@
 }
 .selectCenter {
     text-align: center;
+}
+.spacer {
+    display: block;
+    height: 200px;
 }
