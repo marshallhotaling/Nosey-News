@@ -22,7 +22,7 @@ Tower,
 5. Enter `control + c` in your terminal to stop running the React app at any time
 
 # Preview of App:
-
+<picture><img src="/src/assets/chrome-capture-2024-11-13.gif" alt="app navigation preview " width="250px"/></picture>
 
 # Mobile:
 
