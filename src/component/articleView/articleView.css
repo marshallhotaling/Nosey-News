@@ -1,0 +1,33 @@
+.articleLabel1 {
+    display: block;
+    margin-top: 10px;
+}
+.articleLabel2 {
+    display: block;
+    margin-top: 10px;
+}
+.articleLabel3 {
+    display: block;
+    margin-top: 10px;
+}
+.articleLabel4 {
+    display: block;
+    margin-top: 10px;
+}
+.articleLabel5 {
+    display: block;
+    margin-top: 10px;
+}
+.articleLabel6 {
+    display: block;
+    margin-top: 10px;
+}
+.articleLabel7 {
+    display: block;
+    margin-top: 10px;
+}
+.singleScroolView{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+}
